@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="events.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body bgcolor="lightsteelblue">
+    <br>
+    <div class="container" style="width: 30%;   float: left;  margin-top: 15%; margin-left: 25%;">
+        <h2>List of Persons</h2>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="t_body">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container _form rounded" style="width: 23%; margin-top: 15%;float: right;margin-right: 20%;">
+        <h2>ADD/Update Person Form</h2>
+        <div class="bg-light" style="padding: 10px;">
+
+
+            <div class="form-group">
+                <label for="name"><b>Name:</b></label>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <span style="display: inline-block;">
+                    <input type="text" class="form-control" id="name" placeholder="Enter a Name" name="name">
+                </span>
+
+            </div>
+            <label><b>Gender:</b></label>
+            &nbsp; &nbsp; &nbsp;
+            <label class="radio-inline">
+                <input type="radio" class="_radio" name="radio" value="Male" id="Male">Male
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="radio" class="_radio" value="Female" id="Female">Female
+            </label>
+            <div class="form-group">
+                <label for="age"><b>Age:</b></label>
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="display: inline-block;">
+                    <input type="number" class="form-control" id="age" placeholder="38" name="age">
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="browsers"><b>City:</b></label>
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown" style="display: inline-block;">
+                    <input class="form-control" list="cities" name="city" id="_city" placeholder="Lahore">
+                    <datalist id="cities">
+                        <option value="Lahore">
+                        <option value="Karachi">
+                        <option value="Faislabad">
+                        <option value="Gujranwala">
+                        <option value="Sialkot">
+                    </datalist>
+                </div>
+            </div>
+            <center>
+                <button class="btn btn-primary" id="_add">Add</button>
+                <button class="btn btn-primary" id="_update">Update</button>
+                <button class="btn btn-primary" id="_reset">Reset</button>
+            </center>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
